@@ -24,8 +24,6 @@ class outFood3ReviewAdapter : RecyclerView.Adapter<outFood3ReviewAdapter.ViewHol
         holder.setItem(item)
     }
 
-
-
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun setItem(item: outFood3Review) {
