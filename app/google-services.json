@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "841949340266",
+    "project_id": "sungshin3f",
+    "storage_bucket": "sungshin3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841949340266:android:1fe0df9708c4405965e013",
+        "android_client_info": {
+          "package_name": "com.example.outfood1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841949340266-imktpscbl3g6shqu5tt8riv1fg76kmap.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDC8rmExK_ZmDNxulBqFQWAmcVc7CEsmL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841949340266-imktpscbl3g6shqu5tt8riv1fg76kmap.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
