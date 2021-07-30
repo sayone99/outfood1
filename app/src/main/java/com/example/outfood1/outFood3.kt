@@ -1,8 +1,10 @@
 package com.example.outfood1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_out_food3.*
 
 class outFood3 : AppCompatActivity() {
@@ -25,5 +27,10 @@ class outFood3 : AppCompatActivity() {
         // 익명
         recyclerView.adapter = adapter
         // 3. 데이터가 담긴 어댑터를 리싸이클러뷰에 할당
+
+        outFood3ReviewBtn.setOnClickListener {
+            val intent = Intent(this, outFood3ReviewWrite::class.java)
+            startActivityForResult(intent, 102)
+        }
     }
 }
