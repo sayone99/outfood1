@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:background="#ececea"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
@@ -46,15 +46,6 @@
                 android:textSize="24sp" />
 
         </LinearLayout>
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/food"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
     </LinearLayout>
 
@@ -95,6 +86,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/nanumfont"
                     android:gravity="center"
                     android:text="혼밥"
                     android:textColor="@color/black"
@@ -105,6 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/nanumfont"
                     android:gravity="center"
                     android:text=" 혼자서 먹기 좋은 맛집"
                     android:textColor="@color/black"
@@ -141,6 +134,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/nanumfont"
                     android:gravity="center"
                     android:text="친구들과 Flex하기 좋은 맛집"
                     android:textColor="@color/black"
@@ -176,6 +170,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/nanumfont"
                     android:gravity="center"
                     android:text="효도 맛집"
                     android:textColor="@color/black"
@@ -186,6 +181,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/nanumfont"
                     android:gravity="center"
                     android:text="부모님과 든든한 한끼 맛집"
                     android:textColor="@color/black"
@@ -212,6 +208,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/nanumfont"
                     android:gravity="center"
                     android:text="채식"
                     android:textColor="@color/black"
@@ -222,6 +219,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/nanumfont"
                     android:gravity="center"
                     android:text="다이어터와 비건을 위해!"
                     android:textColor="@color/black"
