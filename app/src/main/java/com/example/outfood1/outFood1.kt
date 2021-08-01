@@ -12,25 +12,25 @@ class outFood1 : AppCompatActivity() {
 
         OutFood1SingleBtn.setOnClickListener {
             val intent = Intent(this, outFood3::class.java)
-            startActivityForResult(intent,101)
+            startActivity(intent)
 
         } // (혼밥 버튼 클릭시) 화면 전환 소스코드
 
         OutFood1FlexBtn.setOnClickListener {
             val intent = Intent(this, outFood3::class.java)
-            startActivityForResult(intent,101)
+            startActivity(intent)
 
         } // (플렉스 버튼 클릭시) 화면 전환 소스코드
 
         OutFood1ParBtn.setOnClickListener {
             val intent = Intent(this, outFood3::class.java)
-            startActivityForResult(intent,101)
+            startActivity(intent)
 
         } // (부모님 버튼 클릭시) 화면 전환 소스코드
 
         OutFood1VegBtn.setOnClickListener {
             val intent = Intent(this, outFood3::class.java)
-            startActivityForResult(intent,101)
+            startActivity(intent)
 
         } // (부모님 버튼 클릭시) 화면 전환 소스코드
 
@@ -42,16 +42,16 @@ class outFood1 : AppCompatActivity() {
 
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        when (requestCode) {
-
-            101 -> println("사라진 액티비티로부터의 응답, ${requestCode}, ${resultCode}")
-
-        }
-
-    }
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//
+//        when (requestCode) {
+//
+//            101 -> println("사라진 액티비티로부터의 응답, ${requestCode}, ${resultCode}")
+//
+//        }
+//
+//    }
 
 
 
