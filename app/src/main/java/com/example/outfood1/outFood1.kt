@@ -35,8 +35,8 @@ class outFood1 : AppCompatActivity() {
         } // (부모님 버튼 클릭시) 화면 전환 소스코드
 
 
-        imageView4.setOnClickListener {
-            finish()
+//        imageView4.setOnClickListener {
+//            finish()
             // 서랍 넣으면 이 코드에서 imageView4 부분을 서랍 누를 햄버거 메뉴로 바꾸면 될듯
         }
 
@@ -55,4 +55,4 @@ class outFood1 : AppCompatActivity() {
 
 
 
-}
+

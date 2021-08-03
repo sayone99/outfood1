@@ -5,7 +5,7 @@ import com.google.firebase.database.Exclude
 data class outFood3Review (
     val objectId:String?,
     val name:String? , // 후기 작성한 사용자의 닉네임
-    val rating:Long? , // 후기 작성한 사용자가 매긴 별점 // 이걸 자료형을 long?으로 해도 될까...?
+    val rating:Long , // 후기 작성한 사용자가 매긴 별점 // 이걸 자료형을 long?으로 해도 될까...?
     val contents:String? // 후기 작성한 사용자가 작성한 후기글
 ) {
 

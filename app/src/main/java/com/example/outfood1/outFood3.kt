@@ -13,6 +13,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_out_food3.*
 
 class outFood3 : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_out_food3)
@@ -27,22 +29,17 @@ class outFood3 : AppCompatActivity() {
         adapter.items.add(outFood3Review("0", "익명", 4, "매운 떡볶이 땡기는 날엔 강추합니다! 근데 실내가 너무 덥습니다."))
         adapter.items.add(outFood3Review("1", "익명", 5, "굉장히 맛있어요! 사장님도 정말 착하십니다!"))
         adapter.items.add(outFood3Review("2", "익명", 3, "알바생이 부족해보입니다. 웨이팅도 길었구요. 맛은 소문대로 맛있었습니다."))
-        adapter.items.add(
-            outFood3Review(
-                "3",
-                "익명",
-                4,
-                "친구랑 갔는데 둘 다 너무 만족했습니다! 다음에 또 오고 싶어요! 특히 치즈가 맛있습니다~"
-            )
-        )
+        adapter.items.add(outFood3Review("3", "익명", 4, "친구랑 갔는데 둘 다 너무 만족했습니다! 다음에 또 오고 싶어요! 특히 치즈가 맛있습니다~"))
         // 2. 어댑터에 데이터 저장
         // 익명
+
         recyclerView.adapter = adapter
         // 3. 데이터가 담긴 어댑터를 리싸이클러뷰에 할당
 
         outFood3ReviewBtn.setOnClickListener {
             val intent = Intent(this, outFood3ReviewWrite::class.java)
             startActivity(intent)
+            println("버튼 잘 작동")
         }
 
         // outfood3pager
@@ -50,11 +47,16 @@ class outFood3 : AppCompatActivity() {
         outFood3Pager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         outFood3Pager.offscreenPageLimit = 4
 
+        outFood3Indicator.setViewPager(outFood3Pager);
+        outFood3Indicator.createIndicators(4,0);
+
         outFood3Pager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
 
                 println("${position + 1} 페이지 선택됨")
+
+                outFood3Indicator.animatePageSelected(position)
             }
         })
 
@@ -80,7 +82,7 @@ class outFood3 : AppCompatActivity() {
                     return Fragment4()
                 }
             }
-            return Fragment3()
+            return Fragment1()
         }
     }
 }
