@@ -16,7 +16,7 @@ open class outFood3ReviewWrite : AppCompatActivity() {
 
        outFood3ReviewWriteSave.setOnClickListener {
             val name = outFood3ReviewWriteName.text.toString()
-            val rating = outFoodStar.rating.toLong()
+            val rating = outFoodStarInput.rating.toLong()
             val contents = outFood3ReviewWriteCont.text.toString()
 
             saveComment(name, rating ,contents)

@@ -28,7 +28,7 @@ class outFood3ReviewAdapter : RecyclerView.Adapter<outFood3ReviewAdapter.ViewHol
 
         fun setItem(item: outFood3Review) {
             itemView.outFood3ReviewName.text = item.name
-            itemView.outFoodStar.rating = item.rating?.toFloat()?:0.0f
+            itemView.outFoodStarInput.rating = item.rating?.toFloat()?:0.0f
             itemView.outFood3Review.text = item.contents
         }
     }
