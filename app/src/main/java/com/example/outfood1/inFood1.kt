@@ -20,7 +20,7 @@ class inFood1 : AppCompatActivity() {
 
 
         inFood1SingleBtn.setOnClickListener {
-            val intent = Intent(this, inFood2::class.java)
+            val intent = Intent(this, inFood2Single::class.java)
             startActivity(intent)
 
         } // (혼밥 버튼 클릭시) 화면 전환 소스코드
@@ -30,7 +30,7 @@ class inFood1 : AppCompatActivity() {
 
 //        setSupportActionBar(binding.toolbar)
 
-        val navController = findNavController(R.id.nav_host_fragment_content_in_food1)
+        val navController = findNavController(R.id.nav_host_fragment_container)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
@@ -41,7 +41,7 @@ class inFood1 : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_in_food1)
+        val navController = findNavController(R.id.nav_host_fragment_container)
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }

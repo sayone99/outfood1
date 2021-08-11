@@ -17,9 +17,9 @@ class outFood1 : AppCompatActivity() {
         } // (혼밥 버튼 클릭시) 화면 전환 소스코드
 
         inFood1PartyBtn.setOnClickListener {
-            val intent = Intent(this, outFood3::class.java)
+            val intent = Intent(this, inFood1::class.java)
             startActivity(intent)
-
+            println("잘 클릭됨")
         } // (플렉스 버튼 클릭시) 화면 전환 소스코드
 
         inFood1HomeBtn.setOnClickListener {

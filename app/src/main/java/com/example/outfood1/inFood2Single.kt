@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.activity_in_food2_single_youtube.*
 import kotlinx.android.synthetic.main.activity_out_food3.*
 import java.net.URLEncoder
 
-class inFood2 : AppCompatActivity() {
+class inFood2Single : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityInFood2SingleYoutubeBinding
@@ -37,7 +37,7 @@ class inFood2 : AppCompatActivity() {
 
 
 
-        val navController = findNavController(R.id.nav_host_fragment_content_in_food2)
+        val navController = findNavController(R.id.nav_host_fragment_container)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
@@ -114,7 +114,7 @@ class inFood2 : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_in_food2)
+        val navController = findNavController(R.id.nav_host_fragment_container)
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }

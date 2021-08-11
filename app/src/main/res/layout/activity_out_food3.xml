@@ -242,12 +242,12 @@
                         android:layout_width="204dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:hapticFeedbackEnabled="true"
+                        android:isIndicator="false"
                         android:numStars="5"
                         android:rating="0"
-                        android:stepSize="0.5"
-                        android:isIndicator="false"
-                        android:hapticFeedbackEnabled="true"
-                        android:layout_weight="1" />
+                        android:stepSize="0.5" />
 
                 </LinearLayout>
 

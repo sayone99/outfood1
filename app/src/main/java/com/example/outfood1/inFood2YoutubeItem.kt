@@ -22,7 +22,7 @@ class inFood2YoutubeItem : AppCompatActivity() {
 
 //        setSupportActionBar(binding.toolbar)
 
-        val navController = findNavController(R.id.nav_host_fragment_content_in_food2_youtube_item)
+        val navController = findNavController(R.id.nav_host_fragment_container)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
@@ -33,7 +33,7 @@ class inFood2YoutubeItem : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_in_food2_youtube_item)
+        val navController = findNavController(R.id.nav_host_fragment_container)
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }
