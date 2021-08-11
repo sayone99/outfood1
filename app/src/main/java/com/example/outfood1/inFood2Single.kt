@@ -12,17 +12,17 @@ import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.example.outfood1.databinding.ActivityInFood2Binding
+import com.example.outfood1.databinding.ActivityInFood2SingleYoutubeBinding
 import com.example.outfood1.youtube.search.data.SearchListResponse
 import com.google.gson.Gson
-import kotlinx.android.synthetic.main.activity_in_food2.*
+import kotlinx.android.synthetic.main.activity_in_food2_single_youtube.*
 import kotlinx.android.synthetic.main.activity_out_food3.*
 import java.net.URLEncoder
 
 class inFood2 : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityInFood2Binding
+    private lateinit var binding: ActivityInFood2SingleYoutubeBinding
     companion object {
         var requestQueue : RequestQueue? = null
     }
@@ -32,7 +32,7 @@ class inFood2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityInFood2Binding.inflate(layoutInflater)
+        binding = ActivityInFood2SingleYoutubeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
@@ -63,7 +63,7 @@ class inFood2 : AppCompatActivity() {
             requestSearch()
         }
 
-    //        binding.fab.setOnClickListener { view ->
+        //        binding.fab.setOnClickListener { view ->
 //            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                .setAction("Action", null).show()
 //        }
@@ -84,7 +84,7 @@ class inFood2 : AppCompatActivity() {
             url,
             {println("\n응답 -> ${println()}")
 
-            processResponse(it)},
+                processResponse(it)},
             {
                 println("\n에러 -> ${println()}")
             }
@@ -103,8 +103,13 @@ class inFood2 : AppCompatActivity() {
 
         adapter?.items?.clear()
         searchList.items.forEach {
-            val youtubeVideo
+            val youtubeVideo = inFood2YoutubeData(it.id?.videoId,
+                it.snippet?.publishedAt, it.snippet?.title, it.snippet?.description, it.snippet?.thumbnails?.medium?.url)
+
+            adapter?.items?.add(youtubeVideo)
         }
+
+        adapter?.notifyDataSetChanged()
 
     }
 

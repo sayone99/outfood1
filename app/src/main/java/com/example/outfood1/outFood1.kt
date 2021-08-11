@@ -10,25 +10,25 @@ class outFood1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        OutFood1SingleBtn.setOnClickListener {
+        inFood1SingleBtn.setOnClickListener {
             val intent = Intent(this, outFood3::class.java)
             startActivity(intent)
 
         } // (혼밥 버튼 클릭시) 화면 전환 소스코드
 
-        OutFood1FlexBtn.setOnClickListener {
+        inFood1PartyBtn.setOnClickListener {
             val intent = Intent(this, outFood3::class.java)
             startActivity(intent)
 
         } // (플렉스 버튼 클릭시) 화면 전환 소스코드
 
-        OutFood1ParBtn.setOnClickListener {
+        inFood1HomeBtn.setOnClickListener {
             val intent = Intent(this, outFood3::class.java)
             startActivity(intent)
 
         } // (부모님 버튼 클릭시) 화면 전환 소스코드
 
-        OutFood1VegBtn.setOnClickListener {
+        inFood1VegBtn.setOnClickListener {
             val intent = Intent(this, outFood3::class.java)
             startActivity(intent)
 

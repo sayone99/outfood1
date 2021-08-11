@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import kotlinx.android.synthetic.main.activity_in_food2.view.*
+import kotlinx.android.synthetic.main.activity_in_food2_single_youtube.view.*
 import kotlinx.android.synthetic.main.activity_in_food2_youtube_item.view.*
 
 class inFood2YoutubeAdapter : RecyclerView.Adapter<inFood2YoutubeAdapter.ViewHolder>() {
