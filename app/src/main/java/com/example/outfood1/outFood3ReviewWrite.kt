@@ -1,4 +1,6 @@
 package com.example.outfood1
+//사용하지 않음
+
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

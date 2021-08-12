@@ -6,17 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.outfood1.R
-import com.example.outfood1.databinding.FragmentSecond2Binding
-//import com.example.outfood1.outFood3Hye.databinding.FragmentSecond2Binding
+import com.example.outfood1.outFood3Hye.databinding.FragmentFirst3Binding
 
 /**
- * A simple [Fragment] subclass as the second destination in the navigation.
+ * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class Second2Fragment : Fragment() {
+class First3Fragment : Fragment() {
 
-    private var _binding: FragmentSecond2Binding? = null
-
+private var _binding: FragmentFirst3Binding? = null
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -26,20 +23,20 @@ class Second2Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentSecond2Binding.inflate(inflater, container, false)
-        return binding.root
+      _binding = FragmentFirst3Binding.inflate(inflater, container, false)
+      return binding.root
 
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_Second2Fragment_to_First2Fragment)
+        binding.buttonFirst.setOnClickListener {
+            findNavController().navigate(R.id.action_First3Fragment_to_Second3Fragment)
         }
     }
 
-    override fun onDestroyView() {
+override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
