@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.outfood3review.view.*
+//import kotlinx.android.synthetic.main.outfood3review.view.*
 
 class outFood3ReviewAdapter : RecyclerView.Adapter<outFood3ReviewAdapter.ViewHolder>() {
     var items = ArrayList<outFood3Review>()
@@ -27,7 +27,7 @@ class outFood3ReviewAdapter : RecyclerView.Adapter<outFood3ReviewAdapter.ViewHol
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun setItem(item: outFood3Review) {
-            itemView.outFood3ReviewName.text = item.name
+            itemView.binding.outFood3ReviewName.text = item.name
             itemView.outFoodStarInput.rating = item.rating?.toFloat()?:0.0f
             itemView.outFood3Review.text = item.contents
         }

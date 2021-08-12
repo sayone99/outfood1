@@ -3,6 +3,7 @@ package com.example.outfood1
 
 
 import android.os.Bundle
+import android.renderscript.ScriptGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_out_food3_reviewwrite.*
@@ -14,7 +15,7 @@ open class outFood3ReviewWrite : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_out_food3_reviewwrite)
+        setContentView(R.layout.activity_out_food3_review_write)
 
        outFood3ReviewWriteSave.setOnClickListener {
             val name = outFood3ReviewWriteName.text.toString()
@@ -33,7 +34,7 @@ open class outFood3ReviewWrite : AppCompatActivity() {
         val comment = outFood3Review(key!!, name, rating, contents)
         // 책에서 쓴 objectid는 객체의 key를 의미하는 것이었음. 우리도 객체를 구분할 키값을 담을 데이터 인수를 하나 더 설정해야 함
         // 그래서 setitem에서도 objectid에 대한 언급이 없었던 것.
-        val commentValues: HashMap<String?, Any?> = comment.toMap()
+        val commentValues: java.util.HashMap<String?, Any?> = comment.toMap()
 
         val childUpdates: MutableMap<String, Any> = HashMap()
         childUpdates["/comments/$key"] = commentValues

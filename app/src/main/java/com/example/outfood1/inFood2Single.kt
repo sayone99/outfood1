@@ -2,6 +2,7 @@ package com.example.outfood1
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.R
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -23,6 +24,7 @@ class inFood2Single : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityInFood2SingleYoutubeBinding
+
     companion object {
         var requestQueue : RequestQueue? = null
     }
@@ -37,15 +39,13 @@ class inFood2Single : AppCompatActivity() {
 
 
 
-        val navController = findNavController(R.id.nav_host_fragment_container)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
+
 
 
         requestQueue = Volley.newRequestQueue(applicationContext)
 
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        recyclerView.adapter = adapter
+        binding.recyclerView.adapter = adapter
 
         adapter?.listener = object : inFood2YoutubeDataListener {
             override fun onItemClick(
@@ -59,14 +59,9 @@ class inFood2Single : AppCompatActivity() {
             }
         }
 
-        inFood2SingleRefreshBtn.setOnClickListener {
+        binding.inFood2SingleRefreshBtn.setOnClickListener {
             requestSearch()
         }
-
-        //        binding.fab.setOnClickListener { view ->
-//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                .setAction("Action", null).show()
-//        }
 
 
 

@@ -1,6 +1,8 @@
 package com.example.outfood1.outFood3Hye
 
 import android.os.Bundle
+import androidx.activity.R
+import androidx.activity.R.*
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -23,7 +25,7 @@ private lateinit var binding: ActivityOutFood3Hye2Binding
 
         setSupportActionBar(binding.toolbar)
 
-        val navController = findNavController(R.id.nav_host_fragment_content_out_food3_hye2)
+        val navController = findNavController(R.nav_host_fragment_content_out_food3_hye2)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
     // 이게 액티비티 이동을 프래그먼트 이동으로 보는 메서드 같음.
@@ -34,7 +36,7 @@ private lateinit var binding: ActivityOutFood3Hye2Binding
     }
 
     override fun onSupportNavigateUp(): Boolean {
-    val navController = findNavController(R.id.nav_host_fragment_content_out_food3_hye2)
+    val navController = findNavController(id.nav_host_fragment_content_out_food3_hye2)
     return navController.navigateUp(appBarConfiguration)
             || super.onSupportNavigateUp()
     }

@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -11,6 +12,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+//        dataBinding = true
 
         defaultConfig {
             applicationId "com.example.outfood1"
