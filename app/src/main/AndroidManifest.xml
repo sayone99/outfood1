@@ -12,7 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Outfood1"
         android:usesCleartextTraffic="true">
-
+        <activity
+            android:name=".outFood3Hye.outFood3Hye1"
+            android:label="@string/title_activity_out_food2_hye"
+            android:theme="@style/Theme.Outfood1.NoActionBar"></activity>
+        <activity
+            android:name=".outFood3Hye.outFood3Hye1"
+            android:label="@string/title_activity_out_food3_hye1"
+            android:theme="@style/Theme.Outfood1.NoActionBar" />
         <activity
             android:name=".inFood1"
             android:label="@string/title_activity_in_food1"
